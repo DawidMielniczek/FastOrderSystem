@@ -4,19 +4,22 @@ import MealItem from "./MealItem";
 export default function Meals(){
 
     const [loadedMeals, setLoadedMeasl] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         async function fetchMeals() {
-        const respons = await fetch('http://localhost:3000/meals');
+        setIsLoading(true);
+        const response = await fetch('http://localhost:3000/meals');
 
-        if(!respons.ok) {
+        if(!response.ok) {
             //
         }
-        
-        const meals = await respons.json();
+        const meals = await response.json();
         setLoadedMeasl(meals);
+        setIsLoading(false);
     }
     fetchMeals();
+    
     }, []);
     
 
@@ -24,11 +27,14 @@ export default function Meals(){
     
     
 
-    return (
-        <ul id="meals">
+    return ( 
+        <div>
+       {isLoading  ? <p> Loading fetch data...</p> :  <ul id="meals">
              {loadedMeals.map((meal) => (
                 <MealItem key={meal.id} meal={meal} />
             ))}
-        </ul>
+        </ul> }
+       </div>
+         
     );
 }
