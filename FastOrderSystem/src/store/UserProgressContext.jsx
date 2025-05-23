@@ -8,7 +8,7 @@ const UserProgressContext = createContext({
     hideCheckout: () => {}
 });
 
-export function UserProgressContextProvider({chidren}){
+export function UserProgressContextProvider({children}){
     
     const [userProgress, setUserProgress] = useState('');
 
@@ -35,7 +35,7 @@ export function UserProgressContextProvider({chidren}){
 
     return (
         <UserProgressContext.Provider value={userProgressCtx} >
-            {chidren}
+            {children}
         </UserProgressContext.Provider>
     );
 
