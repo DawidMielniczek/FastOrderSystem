@@ -20,8 +20,12 @@ export default function Cart(){
         userProgressContext.hideCart();
     }
 
+    function handleGoToCheckout(){
+        userProgressContext.showCheckout();
+    }
+
     return (
-        <Modal className="cart" open={userProgressContext.progress==='cart'}>
+        <Modal className="cart" open={userProgressContext.progress==='cart'} onClose={userProgressContext.progress==='cart' ? handleCloseCart: null }>
             <h2> Your Cart</h2>
             <ul>
                 {context.items.map(item =>{
@@ -31,7 +35,7 @@ export default function Cart(){
             <p className="cart-total"> {currencyFormatter.format(cartTotal)} </p>
             <p className="modal-actions">
                 <Button textOnly onClick={handleCloseCart}> Close </Button>
-               {context.items.length > 0 && <Button> Go to Checkout </Button> } 
+               {context.items.length > 0 && <Button onClick={handleGoToCheckout}> Go to Checkout </Button> } 
             </p>
         </Modal>
     );
