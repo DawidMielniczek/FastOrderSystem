@@ -50,6 +50,7 @@ app.post('/orders', async (req, res) => {
   const newOrder = {
     ...orderData,
     id: (Math.random() * 1000).toString(),
+    orderDate: new Date().toISOString()
   };
   const orders = await fs.readFile('./data/orders.json', 'utf8');
   const allOrders = JSON.parse(orders);

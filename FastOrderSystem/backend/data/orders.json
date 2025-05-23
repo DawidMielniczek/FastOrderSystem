@@ -1,1 +1,63 @@
-[]
+[
+    {
+        "items": [
+            {
+                "id": "m1",
+                "name": "Mac & Cheese",
+                "price": "8.99",
+                "description": "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
+                "image": "images/mac-and-cheese.jpg",
+                "quantity": 1
+            }
+        ],
+        "customer": {
+            "name": "dasd",
+            "email": "dawid.mielniczek99@gmail.com",
+            "street": "Rakszawa",
+            "postal-code": "37-111",
+            "city": "Rakszawa"
+        },
+        "id": "369.06378424020556"
+    },
+    {
+        "items": [
+            {
+                "id": "m1",
+                "name": "Mac & Cheese",
+                "price": "8.99",
+                "description": "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
+                "image": "images/mac-and-cheese.jpg",
+                "quantity": 1
+            }
+        ],
+        "customer": {
+            "name": "dasd",
+            "email": "dawid.mielniczek99@gmail.com",
+            "street": "Rakszawa",
+            "postal-code": "37-111",
+            "city": "Rakszawa"
+        },
+        "id": "282.44029808440763"
+    },
+    {
+        "items": [
+            {
+                "id": "m3",
+                "name": "Caesar Salad",
+                "price": "7.99",
+                "description": "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
+                "image": "images/caesar-salad.jpg",
+                "quantity": 1
+            }
+        ],
+        "customer": {
+            "name": "Dawid Mielniczek",
+            "email": "dawid.mielniczek99@gmail.com",
+            "street": "Rakszawa",
+            "postal-code": "37-111",
+            "city": "Rakszawa"
+        },
+        "id": "339.57919026806405",
+        "orderDate": "2025-05-23T10:44:43.605Z"
+    }
+]
